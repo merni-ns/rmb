@@ -7,6 +7,7 @@ Unless using the Windows executables, You should have a Python interpreter/IDE i
 This Python program uses the messages shard of the Region API to get messages from a region's RMB and save them in a (somewhat) neat format in a text file. The data saved are the post author, date and time, post ID, sequential post number (first post 1, etc), number and name of likes, whether the post is suppressed, self-deleted or mod deleted, and if suppressed, by whom, and of course the message content.
 
 Intro: https://merni.heliohost.org/rmb/intro.html
+
 Steps to use (GUI, Windows only): https://merni.heliohost.org/rmb/help.html
 
 Steps to use (command-line):
@@ -69,6 +70,8 @@ HA. Got you there, dad! Negative zero doesn't exist, therefore neither does your
 ```
 
 ## Errors
+If the GUI tool does not work, contact me via TG.
+
 If the script stops with an error (starting with "Traceback (most recent call last)" etc on the first line) and the last line of the error contains "invalid token" or something like that, please note the last post ID saved to the text file, start up the script again, enable advanced options, and enter a starting post ID about 100 or 1000 more than that one. (Post IDs are not sequential in a region, so you probably will not miss any posts or maybe a few at most. You may need to advance by a lot if your RMB was inactive at the time of that post.) This error may be caused due to an invalid (control) character in a certain post.
 
 If the output contains ? or weird symbols in unexpected places, please just live with it. This and the above error are caused by inconsistent encoding in the API messages shard.
